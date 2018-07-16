@@ -16,7 +16,8 @@ def convert(lines):
 		elif line == 'Tom':
 			person = 'Tom'
 			continue
-		new.append(person + ': ' + line)
+		if person:
+			new.append(person + ': ' + line)
 	return new
 #檔案寫入
 def write_file(filename, lines):
